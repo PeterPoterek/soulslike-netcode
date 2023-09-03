@@ -20,6 +20,10 @@ public class PlayerUIManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     private void Update()
     {
