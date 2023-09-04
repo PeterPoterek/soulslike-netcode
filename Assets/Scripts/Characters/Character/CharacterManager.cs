@@ -20,6 +20,7 @@ public class CharacterManager : NetworkBehaviour
         if (IsOwner)
         {
             characterNetworkManager.networkPosition.Value = transform.position;
+            characterNetworkManager.networkRotation.Value = transform.rotation;
 
         }
         else
@@ -29,6 +30,12 @@ public class CharacterManager : NetworkBehaviour
             characterNetworkManager.networkPosition.Value,
             ref characterNetworkManager.networkPositionVelocity,
             characterNetworkManager.networkPositionSmoothTime);
+
+
+            transform.rotation = Quaternion.Slerp
+            (transform.rotation,
+             characterNetworkManager.networkRotation.Value,
+             characterNetworkManager.networkRotationSmoothTime);
         }
     }
 }
