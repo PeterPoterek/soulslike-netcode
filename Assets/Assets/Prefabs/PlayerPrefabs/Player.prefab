@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -4166524415799699866}
   - component: {fileID: 6943352733369490219}
   - component: {fileID: -7055166478641688925}
+  - component: {fileID: -8881326293642122740}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -67,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddfca28567ec4d84291ac9d5bb9f18a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterController: {fileID: 0}
 --- !u!114 &6943352733369490219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,6 +112,22 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &-8881326293642122740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4487544021966528325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79537a819ca68c048b9f2f032e49763b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  networkPosition:
+    m_InternalValue: {x: 0, y: 0, z: 0}
+  networkPositionVelocity: {x: 0, y: 0, z: 0}
+  networkPositionSmoothTime: 0.1
 --- !u!1001 &7239332496593010963
 PrefabInstance:
   m_ObjectHideFlags: 0
