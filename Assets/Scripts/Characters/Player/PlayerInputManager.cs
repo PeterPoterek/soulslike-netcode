@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerInputManager : MonoBehaviour
 {
     public static PlayerInputManager instance;
+    public PlayerManager player;
 
     PlayerControls playerControls;
 
@@ -107,6 +108,9 @@ public class PlayerInputManager : MonoBehaviour
         {
             moveAmount = 1;
         }
+
+
+        player.playerAnimationManager.UpdateAnimatorMovementParameters(0, moveAmount);
     }
 
 

@@ -6,12 +6,14 @@ using Unity.Netcode;
 public class CharacterManager : NetworkBehaviour
 {
     public CharacterController characterController;
+    [HideInInspector] public Animator animator;
     CharacterNetworkManager characterNetworkManager;
     protected virtual void Awake()
     {
         DontDestroyOnLoad(this);
 
         characterController = GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>();
         characterNetworkManager = GetComponent<CharacterNetworkManager>();
     }
 
