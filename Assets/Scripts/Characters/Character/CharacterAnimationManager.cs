@@ -14,7 +14,7 @@ public class CharacterAnimationManager : MonoBehaviour
     public void UpdateAnimatorMovementParameters(float horizontalValue, float verticalValue)
     {
 
-        character.animator.SetFloat("Horizontal", horizontalValue);
-        character.animator.SetFloat("Vertical", verticalValue);
+        character.animator.SetFloat("Horizontal", horizontalValue, 0.1f, Time.deltaTime);
+        character.animator.SetFloat("Vertical", verticalValue, 0.1f, Time.deltaTime);
     }
 }

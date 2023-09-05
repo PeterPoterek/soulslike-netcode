@@ -110,6 +110,8 @@ public class PlayerInputManager : MonoBehaviour
         }
 
 
+        if (player == null)
+            return;
         player.playerAnimationManager.UpdateAnimatorMovementParameters(0, moveAmount);
     }
 
